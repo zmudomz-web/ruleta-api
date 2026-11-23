@@ -29,7 +29,8 @@ app.get("/ruleta", (req, res) => {
   if (disparoLetal) {
     partidas.delete(key); // Reinicia la partida para ese usuario
     return res.send(
-      `/timeout ${rawUser} ${segundosTimeout} 💥 ¡BANG! @${rawUser} cayó en el intento ${intentoActual}/${MAX_INTENTOS}. ¡Vuelve a intentarlo!
+      `/timeout ${rawUser} ${segundosTimeout} 💥 ¡BANG! @${rawUser} cayó en el intento ${intentoActual}/${MAX_INTENTOS}. ¡Vuelve a intentarlo!`
+    );
   }
 
   // Caso 2: Sobrevivió y completó los 5/5 intentos -> Victoria
